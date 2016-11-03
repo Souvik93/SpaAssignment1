@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<span>
+
+</span>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <form ng-submit="mc.show()" name="reg" class="form-horizontal">
+                <div class="form-group">
+
+                    <label class="control-label col-sm-2" for="fname">Enter Your First Name</label> <input type="text" placeholder="eg-Souvik" required name="fname" ng-model="mc.fn"> <br>
+                </div>
+                <div class="form-group">
+
+                    <label class="control-label col-sm-2" for="lname">Enter Your Last Name</label><input type="text" placeholder="eg-Das" required name="lname" ng-model="mc.ln"><br>
+                </div>  <div class="form-group">
+
+                <label class="control-label col-sm-2" for="empId">Enter Your Capgemini Employee Id</label> <input type="text" placeholder="eg- 735001_IN" name="empId" ng-model="mc.emp_id" required><br> </div>
+                <div class="form-group">
+
+                    <label class="control-label col-sm-2" for="emailId">Enter Your Capgemini Email Id</label> <input type="email" placeholder="eg-Souvik.b.das@capgemini.com" ng-model="mc.email" name="emailId"><br> </div>
+
+
+
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button  class="btn btn-theme btn-lg" ng-disabled="reg.$invalid" class="btn btn-default">Save</button>
+                </div>
+
+
+
+            </form>
+
+
+           <label>{{mc.msg}}</label>
+            <hr>
+            <label>{{mc.message}}</label>
+            <hr>
+          {{mc.url}}
+<!--            <a class = "btn btn-default" id="bookmark-this" href="#" title="Bookmark This Page" bookmark-page>Bookmark This Page</a>-->
+        </div>
+    </div>
+</div>
+</body>
+</html>

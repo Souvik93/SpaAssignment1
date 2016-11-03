@@ -1,0 +1,35 @@
+
+<html ng-app="myApp" ng-controller="myCtrl as mc">
+<head>
+
+  <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="app/app.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</head>
+<body>
+<img src="content/images/CapG.jpg" class="img-rounded" alt="Capgemini" width="690" height="150">
+<br>
+<hr>
+<nav class="navbar navbar-default" role="navigation">
+    <ul class="nav navbar-nav">
+<li><a ui-sref="form">Form</a></li>
+<li><a ui-sref="about">About Us</a></li>
+        </ul>
+</nav>
+<div ui-view>
+
+
+</div>
+
+</body>
+<footer>
+    <hr>
+    <a class = "btn btn-default" id="bookmark-this" href="#" title="Bookmark This Page" bookmark-page>Bookmark This Page</a>
+</footer>
+</html>
