@@ -1,7 +1,9 @@
 var grunt = require('grunt');
-module.exports = function(grunt) {
- 
 
+
+module.exports = function(grunt) {
+ require('time-grunt')(grunt);
+ grunt.initConfig();
   grunt.initConfig({
     jshint: {
             all: ['Gruntfile.js','app/app.js']
@@ -9,12 +11,12 @@ module.exports = function(grunt) {
 
 	concat: {
     options: {
-      separator: ';',
+      separator: ';'
     },
     dist: {
       src: ['app/app_ctrl.js', 'app/app_route.js'],
-      dest: 'app/app.js',
-    },
+      dest: 'app/app.js'
+    }
   },
 
 	  uglify: {
@@ -47,4 +49,6 @@ grunt.loadNpmTasks('grunt-contrib-watch');
 
 grunt.registerTask('cc','concat');
   grunt.registerTask('default', ['jshint','concat','uglify','watch']);
+
+
 }; 
